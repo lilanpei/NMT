@@ -48,7 +48,7 @@ The total number of parameters is 24,235,213 including trainable parameters 16,7
 4. The loss and accuracy history are plotted as below:  
 ![image](https://github.com/lilanpei/NMT/blob/master/Loss_history.png)  
 ![image](https://github.com/lilanpei/NMT/blob/master/Accuracy_history.png)  
-5. Here shows an attention heatmap plotting example:
+5. Here it shows an attention heatmap plotting example:
 ![image](https://github.com/lilanpei/NMT/blob/master/attention.png)  
 
 ## 7. Experiments  
