@@ -66,8 +66,8 @@ From the predicted translation we can see sometimes the prediction is really goo
 3) Using Keras functional API is easy to setup the model but it requires to specify the decoder_outputs with one-hot encoding which may run into high memory consumption problem as the size of target vocabulay increases, so it's better to seek to another way to setup the model.  
 
 ## 11. Code Description
-*Start the StanfordCoreNLPServer.ipynb* : For data segmentation.  
-*NMT - Microblog - ZH to EN - Bi-GRU + Attention + Fasttext word embedding + k-Beam search + BLEU score.ipynb* : For Data Pre-Processing, model setup, training and testing.  
+1. *Start the StanfordCoreNLPServer.ipynb* : For data segmentation.  
+2. *NMT - Microblog - ZH to EN - Bi-GRU + Attention + Fasttext word embedding + k-Beam search + BLEU score.ipynb* : For Data Pre-Processing, model setup, training and testing.  
 
 
 ## Reference 
