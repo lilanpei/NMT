@@ -10,9 +10,9 @@ Education, Laws, **Microblog** , News, Science, Spoken, Subtitles, and Thesis[1]
   
 *Download UM-Corpus from [http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html](http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html)*  
   
-**To avoid OOM error on server, here in this repository we only use the Microblog set for trainning and Twitter set for testing.** The Microblog training data file include 5,000 Bilingual sentences, and the Twitter testing data file include 66 Bilingual sentences, both files are encoded in UTF-8.  
+**To avoid OOM error on server, here in this repository we only use the Microblog set for trainning and Twitter set for testing.** The Microblog training data file includes 5,000 Bilingual sentences, and the Twitter testing data file includes 66 Bilingual sentences. Both files are encoded in UTF-8.  
 
-## 3. Data Pre-Processing
+## 3. Data Pre-Processing  
 ### 1) Segmentation:  
 Here we use a Java implementation tool - Stanford Word Segmenter to preform tokenization on the raw dataset[2].  
 *Download from [https://nlp.stanford.edu/software/segmenter.html#Download](https://nlp.stanford.edu/software/segmenter.html#Download)*  
