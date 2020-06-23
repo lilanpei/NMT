@@ -1,7 +1,7 @@
 # A  sequence  to  sequence(seq2seq)  model  for  Chinese  to  English  translation
 
 ## 1. Problem Statement
-This repository trains an Encoder-Decoder seq2seq model with **Bidirection-GRU, Fasttext word embedding, Attention mechanism, K-Beam search** for Chinese to English Neural machine translation, and evaluate by **BLEU score**.
+This repository trains an Encoder-Decoder seq2seq model with **Bidirection-GRU, Fasttext word embedding, Attention mechanism, K-Beam search** for Chinese to English Neural machine translation, and it is evaluated by **BLEU score**.
 
 ## 2. Data Description
 The dataset is based on the **UM-Corpus** , which is a Large English-Chinese Parallel Corpus for Statistical Machine Translation.
