@@ -8,7 +8,7 @@ The dataset is based on the **UM-Corpus** , which is a Large English-Chinese Par
 It provides two million English-Chinese aligned corpus categorized into eight different text domains, covering several topics and text genres, including: 
 Education, Laws, **Microblog** , News, Science, Spoken, Subtitles, and Thesis[1].  
   
-*Download UM-Corpus from [http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html](http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html)*  
+*The UM-Corpus can be downloaded from [http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html](http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html)*  
   
 **To avoid OOM error on server, here in this repository we only use the Microblog set for trainning and Twitter set for testing.** The Microblog training data file includes 5,000 Bilingual sentences, and the Twitter testing data file includes 66 Bilingual sentences. Both files are encoded in UTF-8.  
 
