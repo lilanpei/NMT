@@ -67,7 +67,7 @@ From the predicted translations we can see sometimes the prediction is really go
 
 ## 11. Code Description
 1. *Start the StanfordCoreNLPServer.ipynb* : For data segmentation.  
-2. *NMT - Microblog - ZH to EN - Bi-GRU + Attention + Fasttext word embedding + k-Beam search + BLEU score.ipynb* : For Data Pre-Processing, model setup, training and testing the model.  
+2. *NMT_Microblog_ZH_to_EN_Bi_GRU_+_Attention_+_Fasttext_word_embedding_+_k_Beam_search_+_BLEU_score.ipynb* : For Data Pre-Processing, model setup, training and testing the model.  
 
 
 ## Reference 
