@@ -23,7 +23,7 @@ For English sentences, we first turn the text from Unicode to plain ASCII, which
 ### 3) Tokenization:  
 Each text is transformed into a sequence of integers, each integer being the index of a token in the dictionary. Only top num_words-1 most frequent words will be taken into account. The num_words was set to 160000 for Chinese(input language) vocabulary and 80000 for English(target lanuage) vocabulary by default[3][11]. (In Microblog data there are only 13756 Chinese tokens, and 11113 English tokens with zero padding.)
 ### 4) Zero padding:
-In order to convert the dataset into matrices, we need to zero pad the sentences to a fixed-length format, by utilizing the max-length of sentences in the dataset or truncating sentences with a user-defined max_length (e.g., 35, since 91% sentences have the length less than or equal to 35 in Mircoblog set.), so as to reduce the memory consumption.
+In order to convert the dataset into matrices, we need to zero pad the sentences to a fixed-length format, by utilizing the max-length of sentences in the dataset or truncating sentences with a user-defined max_length (e.g., 35, since 91% sentences have the length less than or equal to 35 in Mircoblog set.). In this way we can also reduce the memory consumption.
 ### 5) One hot encoding:
 Here we use **Keras functional API** create model, so we need to specify the encoder_inputs, decoder_inputs, and decoder_outputs before start training, the decoder_outputs is the same as decoder_inputs but offset by one timestep. **Note that decoder_outputs needs to be one-hot encoded**.  
 
