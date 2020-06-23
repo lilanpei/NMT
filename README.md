@@ -25,7 +25,7 @@ Each text is transformed into a sequence of integers, each integer being the ind
 ### 4) Zero padding:
 In order to convert the dataset into matrices, we need to zero pad the sentences to a fixed-length format, by utilizing the max-length of sentences in the dataset or truncating sentences with a user-defined max_length (e.g., 35, since 91% sentences have the length less than or equal to 35 in Mircoblog set). In this way we can also reduce the memory consumption.
 ### 5) One hot encoding:
-Here we use **Keras functional API** create model, so we need to specify the encoder_inputs, decoder_inputs, and decoder_outputs before start training, the decoder_outputs is the same as decoder_inputs but offset by one timestep. **Note that decoder_outputs needs to be one-hot encoded**.  
+Since we will use **Keras functional API** to create model, so we need to specify the encoder_inputs, decoder_inputs, and decoder_outputs before start training, the decoder_outputs is the same as decoder_inputs but offset by one timestep. **Note that decoder_outputs needs to be one-hot encoded**.  
 
 ## 4. Word Embedding
 In the code we use a flag to switch using pre_trained fasttext word_embedding by default, or train a fasttext model to get word embedding.
