@@ -52,7 +52,7 @@ Here shows an attention heatmap plotting example:
 ![image](https://github.com/lilanpei/NMT/blob/master/attention.png)  
 
 ## 7. Experiments  
-The decoder will generate the predicted translation using beam search strategy[9], we evaluate the prediction by BLEU score[10].  
+The decoder will generate the predicted translation using k beam search strategy[9](k = 3 by default), we evaluate the prediction by BLEU score[10].  
 The average BLEU score for random 1000 validation set is 48.10  
 The average BLEU score for 66 Twitter testing set (after re-trained the model on the whole Mircoblog set) is 54.17  
 
