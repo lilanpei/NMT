@@ -29,7 +29,7 @@ Since we will use **Keras functional API** to create model, so we need to specif
 *Note: in this case, decoder_outputs are one-hot encoded, thus it may cause memory consumption problem.*  
 
 ## 4. Word Embedding
-In the code we use a flag to switch using pre_trained fasttext word_embedding by default, or train a fasttext model to get word embedding.
+In the code we use a **flag** to switch from using the pre_trained fasttext word_embedding(by default) to training a fasttext model.
 The pre_trained **fasttext word vectors**[4] trained on Common Crawl and Wikipedia using fastText, using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.   
 *Download from [https://fasttext.cc/docs/en/crawl-vectors.html](https://fasttext.cc/docs/en/crawl-vectors.html).*  
 When the flag switch to 1, we train a fasttext model from gensim on the Microblog data in dimension 100, with a window of size 10, min_count of number 5, skip-gram set to True, iteration of number 20 and 10 negatives.  
