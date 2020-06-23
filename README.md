@@ -4,8 +4,8 @@
 This repository trains an Encoder-Decoder seq2seq model with **Bidirection-GRU, Fasttext word embedding, Attention mechanism, K-Beam search** for Chinese to English Neural machine translation, and evaluate by **BLEU score**.
 
 ## 2. Data Description
-The dataset comes from the **UM-Corpus** , which is a Large English-Chinese Parallel Corpus for Statistical Machine Translation,
-provide two million English-Chinese aligned corpus, categorized into eight different text domains, covering several topics and text genres, including: 
+The dataset is based on the **UM-Corpus** , which is a Large English-Chinese Parallel Corpus for Statistical Machine Translation,
+and provides two million English-Chinese aligned corpus, categorized into eight different text domains, covering several topics and text genres, including: 
 Education, Laws, **Microblog** , News, Science, Spoken, Subtitles, and Thesis[1].  
   
 *Download UM-Corpus from [http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html](http://nlp2ct.cis.umac.mo/um-corpus/um-corpus-license.html)*  
