@@ -61,7 +61,7 @@ The average BLEU score for 66 Twitter testing set (after re-trained the model on
 From the predicted translation we can see sometimes the prediction is really good, because the decoder can generate the same or very closed meaning compared to the original sentence, but some other times it might not produce a decent translation. However giving the fact that number of training sample is just 5000(2.08% of the whole UM-Corpus), it is a resonable result. Moreover, judging from the BLEU score of the Statistical Machine Translation on UM-Corpus is 28.67[1], it's already a big progress.  
 
 ## 10. Future Work  
-1) In the UM-Corpus, we can see some sentence have a particularly uncommon length for example 264, which will cause problem such as memory consumption if we use it as the max-length for zeor-padding, low accuaracy for long sentence if truncat the sentence with a small length, so some long sentences should be split more.  
+1) In the UM-Corpus, we can see some sentence have a particularly uncommon length(for example 264), which may cause problems such as memory exhausted if we use it as the max-length for zeor-padding, and low accuaracy for long sentence if we truncate the sentence with a small length, so some long sentences should be split more.  
 2) We use only Mircoblog set in UM-Corpus to reduce memory consumption and long time for training, but it will be worthwhile testing it on the full scale dataset.  
 3) Using Keras functional API is easy to setup the model but we need to specify the decoder_outputs with one-hot encoding which will cause memory consumption problem as the size of target vocabulay increase, so it's better to change to another framework.  
 
