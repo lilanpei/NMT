@@ -14,8 +14,7 @@ Education, Laws, **Microblog** , News, Science, Spoken, Subtitles, and Thesis[1]
 
 ## 3. Data Pre-Processing  
 ### 1) Segmentation:  
-Here we use a Java implementation tool - Stanford Word Segmenter to preform tokenization on the raw dataset[2].  
-*Download from [https://nlp.stanford.edu/software/segmenter.html#Download](https://nlp.stanford.edu/software/segmenter.html#Download)*  
+Here we use a Java implementation tool - Stanford Word Segmenter to preform tokenization on the raw dataset[2](*available from [https://nlp.stanford.edu/software/segmenter.html#Download](https://nlp.stanford.edu/software/segmenter.html#Download)*).  
 For English, the segmenter will split the punctuation and separate some affixes like possessives.  
 For Chinese, consider it is standardly written without spaces between words, the segmenter will split texts into a sequence of words, defined according to some word segmentation standard.  
 ### 2) Normalization:
