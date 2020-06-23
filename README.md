@@ -30,8 +30,7 @@ Since we will use **Keras functional API** to create model, so we need to specif
 
 ## 4. Word Embedding
 In the code we use a **flag** to switch from using the pre_trained fasttext word_embedding(by default) to training a fasttext model.
-The pre_trained **fasttext word vectors**[4] were trained on Common Crawl and Wikipedia using fastText. These models were trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.   
-*Download from [https://fasttext.cc/docs/en/crawl-vectors.html](https://fasttext.cc/docs/en/crawl-vectors.html).*  
+The pre_trained **fasttext word vectors**[4](*Download from [https://fasttext.cc/docs/en/crawl-vectors.html](https://fasttext.cc/docs/en/crawl-vectors.html).*) were trained on Common Crawl and Wikipedia using fastText. These models were trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.   
 When the flag switch to 1, we train a fasttext model from gensim on the Microblog data in dimension 100, with a window of size 10, min_count of number 5, skip-gram set to True, iteration of number 20 and 10 negatives.  
 No matter the flag set to 1 or 0, we need to customize the embeddings by mapping the vectors to the vocabulary based on the Microblog dataset.  
 
