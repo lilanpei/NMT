@@ -42,13 +42,13 @@ We use **Keras funtional API** to creat a **Bidirection-GRU with word embedding 
 The total number of parameters is 24,235,213 including trainable parameters 16,774,513 and non-trainable parameters 7,460,700.  
 
 ## 6. Training Details  
-1. We use fit_generator() instead of the fit() method because our data is too large to fit into the memory[7]. After shuffling the Microblog dataset, we creat training and validation sets using an 80%-20% split. As a result, there are 4000 bilingual sentences for training and 1000 for validation.   
-2. The network is trained with a batchsize of 32(compromised on the memory consumption and the time), an optimizer of adam and a loss function of categorical_crossentropy for a total of 40 epochs.  
+1. We use fit_generator() instead of the fit() method because our data is too large to fit into the memory[7]. After shuffling the Microblog dataset, we create training and validation sets using an 80%-20% split. As a result, there are 4000 bilingual sentences for training and 1000 for validation.   
+2. The network is trained with a batch-size of 32(compromised on the memory consumption and the time), an optimizer of adam and a loss function of categorical_crossentropy for a total of 40 epochs.  
 3. The training accuracy converges to 0.9996 and the val accuracy reaches 0.7869.  
-The loss and accuracy history are plotted as below:  
+4. The loss and accuracy history are plotted as below:  
 ![image](https://github.com/lilanpei/NMT/blob/master/Loss_history.png)  
 ![image](https://github.com/lilanpei/NMT/blob/master/Accuracy_history.png)  
-Here shows an attention heatmap plotting example:
+5. Here shows an attention heatmap plotting example:
 ![image](https://github.com/lilanpei/NMT/blob/master/attention.png)  
 
 ## 7. Experiments  
