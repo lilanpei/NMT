@@ -58,8 +58,7 @@ The average BLEU score for random 1000 validation set is 48.10.
 The average BLEU score for 66 Twitter testing set (after re-trained the model on the whole Mircoblog set) is 54.17.  
 
 ## 9. Conclusion  
-From the predicted translation we can see sometimes the prediction is really good, the decoder can generate the same or very closed meaning compare to the original sentence,
-sometimes the prediction crashed at very begining, but consider the number of training sample is just 5000, 2.08% of the whole UM-Corpus, that is a resonable result.
+From the predicted translation we can see sometimes the prediction is really good, because the decoder can generate the same or very closed meaning compared to the original sentence.  Sometimes the prediction crashed at very begining, but consider the number of training sample is just 5000, 2.08% of the whole UM-Corpus, that is a resonable result.
 In another way, compare to the 28.67 BLEU score of the Statistical Machine Translation on UM-Corpus[1], it's already a big progress.
 
 ## 10. Future Work  
