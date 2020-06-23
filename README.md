@@ -63,7 +63,7 @@ From the predicted translation we can see sometimes the prediction is really goo
 ## 10. Future Work  
 1) In the UM-Corpus, we can see some sentence have a particularly uncommon length(for example 264), which may cause problems such as memory exhausted if we use it as the max-length for zeor-padding, and low accuaracy for long sentence if we truncate the sentence with a small length, so these long sentences should be split further.  
 2) We use only Mircoblog set in UM-Corpus to reduce the memory and time consumption of training as the serve cannot fit the model for the whole dataset, and it already takes more than one day to train an epoch on the serve for only a part of the dataset, but it will be worthwhile testing on the full scale dataset.  
-3) Using Keras functional API is easy to setup the model but it requires to specify the decoder_outputs with one-hot encoding which may run into high memory consumption problem as the size of target vocabulay increases, so it's better to change to another way to setup the model.  
+3) Using Keras functional API is easy to setup the model but it requires to specify the decoder_outputs with one-hot encoding which may run into high memory consumption problem as the size of target vocabulay increases, so it's better to seek to another way to setup the model.  
 
 ## 11. Code Description
 *Start the StanfordCoreNLPServer.ipynb* : For data segmentation.  
