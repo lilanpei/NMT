@@ -19,7 +19,7 @@ For English, the segmenter splits the punctuation and separates some affixes lik
 For Chinese, which is standardly written without spaces between words, the segmenter splits texts into a sequence of words according to some word segmentation standard.  
 ### 2) Normalization:
 For Chinese sentences, we covert exotic words to lowercase, then trim and remove non-letter characters.   
-For English sentences, Turn the text from Unicode to plain ASCII, covert to lowercase, trim and remove non-letter characters, then as the target language we add a start and an end token to the sentence so that the model knows when to start and stop predicting.  
+For English sentences, we turn the text from Unicode to plain ASCII, covert to lowercase, trim and remove non-letter characters, then as the target language we add a start and an end token to the sentence so that the model knows when to start and stop predicting.  
 ### 3) Tokenization:  
 Turning each text into a sequence of integers, each integer being the index of a token in the dictionary. Only top num_words-1 most frequent words will be taken into account, num_words was set 160000 for Input Chinese vocabulary and 80000 for target English vocabulary by default[3][11]. (In Microblog data there are only 13756 Chinese tokens, and 11113 English tokens with zero padding.)
 ### 4) Zero padding:
@@ -43,7 +43,7 @@ The total number of parameters is 24,235,213 include trainable parameters 16,774
 
 ## 6. Training Details  
 We use fit_generator() instead of the fit() method as our data is too large to fit into the memory[7]. After shuffle the Microblog dataset, we creat training and validation sets using an 80-20 split,
-so there are 4000 bilingual sentences for training and 1000 for validation. We trained the network with batchsize of 32(compromised on the memory consumption and the time) for 40 epochs, training accuracy converged to 0.9996 and the val accuracy reached to 0.7869.
+so there are 4000 bilingual sentences for training and 1000 for validation. We trained the network with batchsize of 32(compromised on the memory consumption and the time), adam optimizer and categorical_crossentropy  loss function for a total of 40 epochs. The training accuracy converged to 0.9996 and the val accuracy reached 0.7869.
 The loss and accuracy history plots as below:  
   
 ![image](https://github.com/lilanpei/NMT/blob/master/Loss_history.png)  
