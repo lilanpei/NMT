@@ -23,7 +23,7 @@ For English sentences, we first turn the text from Unicode to plain ASCII, which
 ### 3) Tokenization:  
 Each text is transformed into a sequence of integers, each integer being the index of a token in the dictionary. Only top num_words-1 most frequent words will be taken into account. The num_words was set to 160000 for Chinese(input language) vocabulary and 80000 for English(target lanuage) vocabulary by default[3][11]. (In Microblog data there are only 13756 Chinese tokens, and 11113 English tokens with zero padding.)
 ### 4) Zero padding:
-In order to convert the dataset into matrix, we need to perform zero padding to the sentences to a fixed-length, with the max-lenght of the sentences in the dataset or a small max_length to truncat the sentence in order to reduce the memory consumption, for example 35. (91% sentences have the length less than or euqel to 35 in Mircoblog set.)
+In order to convert the dataset into matrix, we zero pad sentences to a fixed-length format, with the max-length of the sentences in the dataset or a small user-defined max_length to truncate the sentence in order to reduce the memory consumption, for example 35. (91% sentences have the length less than or equal to 35 in Mircoblog set.)
 ### 5) One hot encoding:
 Here we use **Keras functional API** create model, so we need to specify the encoder_inputs, decoder_inputs, and decoder_outputs before start training, the decoder_outputs is the same as decoder_inputs but offset by one timestep. **Note that decoder_outputs needs to be one-hot encoded**.  
 
@@ -62,7 +62,7 @@ sometimes the prediction crashed at very begining, but consider the number of tr
 In another way, compare to the 28.67 BLEU score of the Statistical Machine Translation on UM-Corpus[1], it's already a big progress.
 
 ## 10. Future Work  
-1) In the UM-Corpus, we can see some sentence have a exaggerated length for example 264, which will cause problem such as memory consumption if we use it as the max-lenght for zeor-padding, low accuaracy for long sentence if truncat the sentence with a small lenght, so some long sentences should be split more.  
+1) In the UM-Corpus, we can see some sentence have a exaggerated length for example 264, which will cause problem such as memory consumption if we use it as the max-length for zeor-padding, low accuaracy for long sentence if truncat the sentence with a small length, so some long sentences should be split more.  
 2) We use only Mircoblog set in UM-Corpus to reduce memory consumption and long time for training, but it will be worthwhile testing it on the full scale dataset.  
 3) Using Keras functional API is easy to setup the model but we need to specify the decoder_outputs with one-hot encoding which will cause memory consumption problem as the size of target vocabulay increase, so it's better to change to another framework.  
 
