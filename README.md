@@ -32,14 +32,14 @@ Since we will use **Keras functional API** to create model, so we need to specif
 In the code we use a **flag** to switch from using the pre_trained fasttext word_embedding(by default) to training a fasttext model.
 The pre_trained **fasttext word vectors**[4](*available from [https://fasttext.cc/docs/en/crawl-vectors.html](https://fasttext.cc/docs/en/crawl-vectors.html)*) were trained on Common Crawl and Wikipedia using fastText. These models were trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.   
 If the flag is switched to 1, we train a fasttext model from gensim on the Microblog data in dimension 100, with a window of size 10, min_count of number 5, skip-gram set to True, iteration of number 20 and 10 negatives.  
-No matter the flag set to 1 or 0, we need to customize the embeddings by mapping the vectors to the vocabulary based on the Microblog dataset.  
+No matter the flag is set to 1 or 0, we need to customize the embeddings by mapping the vectors to the vocabulary based on the Microblog dataset.  
 
 ## 5. The Seq2seq Model
-We use **Keras funtional API** to creat a **Bidirection-GRU with word embedding and Attention mechnism encoder-decoder Seq2seq model**[5][6][7][8], the model framework is shown below:
+We use **Keras funtional API** to creat a **Bidirection-GRU with word embedding and Attention mechnism encoder-decoder Seq2seq model**[5][6][7][8]. The model framework is shown below:
   
 ![image](https://github.com/lilanpei/NMT/blob/master/model.png)  
 
-The total number of parameters is 24,235,213 include trainable parameters 16,774,513 and Non-trainable parameters: 7,460,700  
+The total number of parameters is 24,235,213 include trainable parameters 16,774,513 and Non-trainable parameters: 7,460,700.  
 
 ## 6. Training Details  
 We use fit_generator() instead of the fit() method as our data is too large to fit into the memory[7]. After shuffle the Microblog dataset, we creat training and validation sets using an 80-20 split,
