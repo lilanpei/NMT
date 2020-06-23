@@ -63,9 +63,9 @@ sometimes the prediction crashed at very begining, but consider the number of tr
 In another way, compare to the 28.67 BLEU score of the Statistical Machine Translation on UM-Corpus[1], it's already a big progress.
 
 ## 10. Future Work  
-a. In the UM-Corpus, we can see some sentence have a exaggerated length for example 264, which will cause problem such as memory consumption if we use it as the max-lenght for zeor-padding, low accuaracy for long sentence if truncat the sentence with a small lenght, so some long sentences should be split more.  
-b. We use only Mircoblog set in UM-Corpus to reduce memory consumption and long time for training, but it will be worthwhile testing it on the full scale dataset.  
-c. Using Keras functional API is easy to setup the model but we need to specify the decoder_outputs with one-hot encoding which will cause memory consumption problem as the size of target vocabulay increase, so it's better to change to another framework.  
+1) In the UM-Corpus, we can see some sentence have a exaggerated length for example 264, which will cause problem such as memory consumption if we use it as the max-lenght for zeor-padding, low accuaracy for long sentence if truncat the sentence with a small lenght, so some long sentences should be split more.  
+2) We use only Mircoblog set in UM-Corpus to reduce memory consumption and long time for training, but it will be worthwhile testing it on the full scale dataset.  
+3) Using Keras functional API is easy to setup the model but we need to specify the decoder_outputs with one-hot encoding which will cause memory consumption problem as the size of target vocabulay increase, so it's better to change to another framework.  
 
 ## 11. Code Description
 *Start the StanfordCoreNLPServer.ipynb* : For data segmentation.  
