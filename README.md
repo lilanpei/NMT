@@ -39,7 +39,7 @@ We use **Keras funtional API** to creat a **Bidirection-GRU with word embedding 
   
 ![image](https://github.com/lilanpei/NMT/blob/master/model.png)  
 
-The total number of parameters is 24,235,213 include trainable parameters 16,774,513 and Non-trainable parameters: 7,460,700.  
+The total number of parameters is 24,235,213 including trainable parameters 16,774,513 and Non-trainable parameters: 7,460,700.  
 
 ## 6. Training Details  
 We use fit_generator() instead of the fit() method as our data is too large to fit into the memory[7]. After shuffle the Microblog dataset, we creat training and validation sets using an 80-20 split,
